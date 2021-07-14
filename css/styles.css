@@ -1,9 +1,97 @@
-body {
-  color: black;
+/* #757575 Основний колір тексту 
+ #212121 колір заголовків і кнопок
+ #2196f3 колір акценту 
+ #ffffff основний колір фону 
+ #f5f4fa вторинний колір фону 
+ #2F303A третинний колір фону (шапка і футер)
+ #2196f3 первинний колір бренду
+ #000000 вторинний колір бренду (шапка)
+ #FFFFFF третинний колір бренду (футер)
+Roboto 400/500700/900 основний шрифт 
+Raleway 700 додатковий шрифт 
+
+Основні скорочення у назвах змінних
+pri -> primary
+sec -> secondary
+ter -> tertiary
+tc -> text color
+bgc -> background color
+tlc -> title color
+ac -> accent color
+brc -> brand color 
+btn -> button 
+ft  -> footer
+cc -> contacts color
+*/
+
+
+:root {
+  --pri-brc: #2196f3;  /* Первинний колір бренду (лого) */
+  --sec-brc: #000000;  /* вторинний колір бренду (лого шапка) */
+  --ter-brc: #FFFFFF;  /* Третинний колір бренду (лого футер) */
+  --pri-tc: #757575;   /* Первинний колір тексту */
+  --pri-tlc: #212121;  /* Первинний колыр заголовків */
+  --pri-bgc: #ffffff;  /* Первинний колір фону*/
+  --sec-bgc: #f5f4fa;  /* Вторинний колір фону */
+  --ter-bgc: #2F303A;  /* третинний колір фону (шапка і футер) */
+  --ac: #2196f3;       /* колір акценту */
+  --btn-tc: #212121;   /* Колір тексту кнопок */
+  --btn-bgc: #f5f4fa;  /* колір фону кнопок */
+  --ft-cc: rgba(255,255,255,0.6) /*колір контактів в підвалі */
+  
 }
 
-li {
+body {
+  background-color: var(--pri-bgc);
+  color: var(--pri-tc);
+  font-family: "Roboto", "Arial", sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.upper-lin {
+position: absolute;
+width: 1600px;
+height: 80px;
+left: 0px;
+top: 0px;
+}
+
+.brand {
+/* position: absolute; */
+width: 145px;
+height: 31px;
+left: 215px;
+top: 24px;
+font-weight: bold;
+font-size: 26px;
+line-height: 31px;
+background-color: coral;
+}
+.brand-color-one {
+  color: var(--pri-brc)
+}
+.brand-color-two {
+  color: var(--sec-brc)
+}
+
+.navigate-link:focus, .navigate-link:hover {
+  color: var(--ac);
+  background-color: red;
+}
+.text {
+
+}
+
+li,nav {
   list-style: none;
-  /* display: inline; */
   display: inline-block;
+}
+a {
+  text-decoration: none;
+  background-color: coral;
+}
+.cap,footer {
+background-color: var(--ter-bgc);
 }
