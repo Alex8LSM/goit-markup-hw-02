@@ -22,76 +22,143 @@ brc -> brand color
 btn -> button 
 ft  -> footer
 cc -> contacts color
+lc -> link color
 */
 
-
 :root {
-  --pri-brc: #2196f3;  /* Первинний колір бренду (лого) */
-  --sec-brc: #000000;  /* вторинний колір бренду (лого шапка) */
-  --ter-brc: #FFFFFF;  /* Третинний колір бренду (лого футер) */
-  --pri-tc: #757575;   /* Первинний колір тексту */
-  --pri-tlc: #212121;  /* Первинний колыр заголовків */
-  --pri-bgc: #ffffff;  /* Первинний колір фону*/
-  --sec-bgc: #f5f4fa;  /* Вторинний колір фону */
-  --ter-bgc: #2F303A;  /* третинний колір фону (шапка і футер) */
-  --ac: #2196f3;       /* колір акценту */
-  --btn-tc: #212121;   /* Колір тексту кнопок */
-  --btn-bgc: #f5f4fa;  /* колір фону кнопок */
-  --ft-cc: rgba(255,255,255,0.6) /*колір контактів в підвалі */
-  
+  --pri-brc: #2196f3; /* Первинний колір бренду (лого) */
+  --sec-brc: #000000; /* вторинний колір бренду (лого шапка) */
+  --ter-brc: #ffffff; /* Третинний колір бренду (лого футер) */
+  --hero-tc: #ffffff; /* Колір тексту героя */
+  --pri-tc: #757575; /* Первинний колір тексту */
+  --pri-tlc: #212121; /* Первинний колір заголовків */
+  --pri-bgc: #ffffff; /* Первинний колір фону*/
+  --sec-bgc: #f5f4fa; /* Вторинний колір фону */
+  --ter-bgc: #2f303a; /* третинний колір фону (шапка і футер) */
+  --ac: #2196f3; /* колір акценту */
+  --btn-tc: #212121; /* Колір тексту кнопок */
+  --btn-bgc: #f5f4fa; /* колір фону кнопок */
+  --ft-cc: rgba(255, 255, 255, 0.6); /*колір контактів в підвалі */
+  --pri-lc: #212121; /*Первинний колір посилань*/
+  --ft-tc: #ffffff; /* Колір тексту адреси*/
 }
 
 body {
   background-color: var(--pri-bgc);
   color: var(--pri-tc);
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
   font-style: normal;
 }
 
-.upper-lin {
-position: absolute;
-width: 1600px;
-height: 80px;
-left: 0px;
-top: 0px;
+.main-content .title {
+  color: var(--pri-tlc);
+}
+
+.features {
+  width: 270px;
+  height: 101px;
+}
+
+.features .title {
+   text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+}
+.upper-line {
+  width: 1600px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
 }
 
 .brand {
-/* position: absolute; */
-width: 145px;
-height: 31px;
-left: 215px;
-top: 24px;
-font-weight: bold;
-font-size: 26px;
-line-height: 31px;
-background-color: coral;
+  font-weight: bold;
+  font-size: 26px;
 }
 .brand-color-one {
-  color: var(--pri-brc)
+  color: var(--pri-brc);
 }
-.brand-color-two {
-  color: var(--sec-brc)
+.upper-line .brand-color-two {
+  color: var(--sec-brc);
 }
 
-.navigate-link:focus, .navigate-link:hover {
+.cap .title{
+  width: 750px;
+  height: 120px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--hero-tc);
+}
+.cap .btn {
+  width: 200px;
+  height: 50px;
+  background-color: var(--ac);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--hero-tc);
+}
+
+.btn:hover, .btn:focus {
+  border-color: black;
+  cursor: pointer;
+}
+.nav-links .link {
+  color: var(--pri-lc);
+}
+.contacts .link {
+  color: var(--pri-tc);
+}
+.link.active {
   color: var(--ac);
-  background-color: red;
 }
-.text {
-
-}
-
-li,nav {
+li {
   list-style: none;
-  display: inline-block;
 }
+
 a {
   text-decoration: none;
-  background-color: coral;
 }
-.cap,footer {
-background-color: var(--ter-bgc);
+/*стилі футера*/
+.footer .brand-color-two {
+  color: var(--ter-brc);
+}
+.cap,
+footer {
+  background-color: var(--ter-bgc);
+}
+.footer-address {
+  color: var(--ft-tc);
+  font-style: normal;
+}
+.footer .link {
+  color: var(--ft-cc);
+  font-style: normal;
+}
+/*Загальні стилі*/
+.contacts,
+.nav-links,
+.main-content li,
+.upper-line li {
+  display: inline-block;
+}
+
+.link:focus,
+.link:hover {
+  color: var(--ac);
+}
+
+.contacts link {
+  
 }
