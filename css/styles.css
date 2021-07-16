@@ -7,7 +7,7 @@
  #2196f3 первинний колір бренду
  #000000 вторинний колір бренду (шапка)
  #FFFFFF третинний колір бренду (футер)
-Roboto 400/500700/900 основний шрифт 
+Roboto 400/500/700/900 основний шрифт 
 Raleway 700 додатковий шрифт 
 
 Основні скорочення у назвах змінних
@@ -40,13 +40,13 @@ lc -> link color
   --btn-bgc: #f5f4fa; /* колір фону кнопок */
   --ft-cc: rgba(255, 255, 255, 0.6); /*колір контактів в підвалі */
   --pri-lc: #212121; /*Первинний колір посилань*/
-  --ft-tc: #ffffff; /* Колір тексту адреси*/
+  --ft-tc: #ffffff; /* Колір тексту адреси у футері*/
 }
 
 body {
   background-color: var(--pri-bgc);
   color: var(--pri-tc);
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: 'Roboto', 'Raleway', sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
   font-style: normal;
@@ -65,9 +65,11 @@ body {
    text-transform: uppercase;
 }
 
-a {
-  color: inherit;
-}
+ a {
+   text-decoration: none;
+   color: inherit;
+  }
+   
 .upper-line {
   width: 1600px;
   height: 80px;
@@ -127,9 +129,10 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+li.link.test {
+  list-style: disk;
 }
+
 /*стилі футера*/
 .footer .brand-color-two {
   color: var(--ter-brc);
