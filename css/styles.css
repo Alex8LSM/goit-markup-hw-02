@@ -1,27 +1,27 @@
 :root {
   --body-bgc: #e5e5e5; /* Колір фону тіла сайту*/
-  --pri-tc: #757575; /* Основний колір тексту */
-  --pri-tlc: #212121; /* Основний колір заголовків */
-  --pri-lc: #212121; /* Основний колір посилань*/
-  --pri-btn-tc: #212121; /* Основний колір тексту кнопок */
-  --sec-btn-tc: #ffffff; /* Вторинний колір тексту кнопок */
+  --pri-text: #757575; /* Основний колір тексту */
+  --pri-title: #212121; /* Основний колір заголовків */
+  --pri-link: #212121; /* Основний колір посилань*/
+  --pri-btn-text: #212121; /* Основний колір тексту кнопок */
+  --sec-btn-text: #ffffff; /* Вторинний колір тексту кнопок */
   --btn-bgc: #f5f4fa; /* Основний колір фону кнопок */
-  --pri-brc: #2196f3; /* Основний колір бренду (лого) */
-  --ac: #2196f3; /* колір акценту (виділення посилань і кнопок)*/
-  --sec-brc: #000000; /* вторинний колір бренду (лого шапка) */
-  --ter-brc: #ffffff; /* Третинний колір бренду (лого футер) */
-  --pri-bgc: #ffffff; /* Основний колір фону секцій*/
-  --sec-bgc: #f5f4fa; /* Вторинний колір фону секцій */
-  --ter-bgc: #2f303a; /* третинний колір фону секцій (шапка і футер) */
-  --hero-tc: #ffffff; /* Колір тексту героя */
-  --ft-cc: rgba(255, 255, 255, 0.6); /*колір контактів в підвалі */
-  --ft-tc: #ffffff; /* Колір тексту адреси у футері*/
+  --pri-brand: #2196f3; /* Основний колір бренду (лого) */
+  --accent: #2196f3; /* колір акценту (виділення посилань і кнопок)*/
+  --sec-brand: #000000; /* вторинний колір бренду (лого шапка) */
+  --ter-brand: #ffffff; /* Третинний колір бренду (лого футер) */
+  --pri-section-bgc: #ffffff; /* Основний колір фону секцій*/
+  --sec-section-bgc: #f5f4fa; /* Вторинний колір фону секцій */
+  --ter-section-bgc: #2f303a; /* третинний колір фону секцій (шапка і футер) */
+  --hero-text: #ffffff; /* Колір тексту героя */
+  --footer-contacts: rgba(255, 255, 255, 0.6); /*колір контактів в підвалі */
+  --ft-text: #ffffff; /* Колір тексту адреси у футері*/
 }
 
 /*ЗАГАЛЬНІ СТИЛІ*/
 body {
   background-color: var(--body-bgc);
-  color: var(--pri-tc);
+  color: var(--pri-text);
   font-family: 'Roboto', 'Raleway', sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
@@ -39,14 +39,14 @@ body {
 .btn:hover,
 .btn:focus {
   cursor: pointer;
-  background-color: var(--ac);
-  color: var(--sec-btn-tc);
+  background-color: var(--accent);
+  color: var(--sec-btn-text);
 }
 .footer .link:focus,
 .footer .link:hover,
 .upper-line .link:focus,
 .upper-line .link:hover {
-  color: var(--ac);
+  color: var(--accent);
 }
 
 /*header*/
@@ -54,7 +54,7 @@ body {
   font-weight: 500;
 }
 .link.active {
-  color: var(--ac);
+  color: var(--accent);
 }
 .brand {
   font-family: 'Raleway';
@@ -63,20 +63,20 @@ body {
   line-height: 1.192;
 }
 .brand-color-one {
-  color: var(--pri-brc);
+  color: var(--pri-brand);
 }
 .upper-line .brand-color-two {
-  color: var(--sec-brc);
+  color: var(--sec-brand);
 }
 .upper-line,
 .main-content {
-  background-color: var(--pri-bgc);
+  background-color: var(--pri-section-bgc);
 }
 .nav-links .list {
-  color: var(--pri-lc);
+  color: var(--pri-link);
 }
 .contacts .list {
-  color: var(--pri-tc);
+  color: var(--pri-text);
 }
 .brand,
 .contacts,
@@ -104,18 +104,18 @@ body {
 
 /*footer*/
 .footer .brand-color-two {
-  color: var(--ter-brc);
+  color: var(--ter-brand);
 }
 .cap,
 footer {
-  background-color: var(--ter-bgc);
+  background-color: var(--ter-section-bgc);
 }
 .footer-address {
-  color: var(--ft-tc);
+  color: var(--ft-text);
   font-style: normal;
 }
 .footer .list {
-  color: var(--ft-cc);
+  color: var(--footer-contacts);
   font-style: normal;
 }
 
@@ -128,16 +128,16 @@ footer {
   line-height: 1.364;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--hero-tc);
+  color: var(--hero-text);
 }
 .cap .btn {
   width: 200px;
   height: 50px;
-  background-color: var(--ac);
+  background-color: var(--accent);
   font-weight: bold;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  color: var(--hero-tc);
+  color: var(--hero-text);
 }
 
 .our-works .title,
@@ -146,36 +146,35 @@ footer {
   text-align: center;
 }
 .our-team {
-  background-color: var(--sec-bgc);
+  background-color: var(--sec-section-bgc);
 }
 .our-team .list {
-  background-color: var(--pri-bgc);
+  background-color: var(--pri-section-bgc);
 }
 .main-content .title {
-  color: var(--pri-tlc);
+  color: var(--pri-title);
 }
 .features .list {
   width: 270px;
-  height: 101px;
 }
 .features .title {
   text-transform: uppercase;
   line-height: 1.143;
   font-size: inherit;
 }
-.our-works .title {
-  font-size: 36px;
-  line-height: 1.667;
-}
 .our-team .title,
 .our-team .profession {
   font-size: 16px;
   line-height: 1.188;
 }
-
+.our-works>.title,
+.our-team>.title {
+  font-size: 36px;
+  line-height: 1.167;
+}
 /*Стилы файлу portfolio*/
 .hero-title.hidden {
-  color: var(--hero-tc);
+  color: var(--hero-text);
 }
 .portfolio .title {
   font-size: 18px;
